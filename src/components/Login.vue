@@ -2,11 +2,8 @@
 <template>
     <div class="login_container">
 
-        登录组件1
+        <span style="color: red">登录组件1</span>
         <div class="login_box">
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-suo"></use>
-            </svg>
             <!-- 头像区域 -->
             <div class="avatar_box">
                 <img src="../assets/logo.png">
@@ -15,11 +12,11 @@
             <el-form ref="loginFormRef" label-width="0px" :rules="loginFromRules" :model="loginForm" class="login_form">
                 <!-- 用户名 -->
                 <el-form-item prop="username">
-                    <el-input v-model="loginForm.username" prefix-icon="hpicon-ren"></el-input>
+                    <el-input v-model="loginForm.username" prefix-icon="iconfont hpicon-ren"></el-input>
                 </el-form-item>
                 <!-- 密码 -->
                 <el-form-item prop="password">
-                    <el-input v-model="loginForm.password" prefix-icon="hpicon-suo" show-password></el-input>
+                    <el-input v-model="loginForm.password" prefix-icon="iconfont hpicon-suo" show-password></el-input>
                 </el-form-item>
                 <!-- 按钮 -->
                 <el-form-item class="btns">
@@ -113,6 +110,8 @@ export default {
     activated() { }, //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
+
+
 <style lang="less" scoped>
 /* @import url(); 引入公共css类 */
 .login_container {
